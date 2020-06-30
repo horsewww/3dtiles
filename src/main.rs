@@ -2,8 +2,6 @@ extern crate clap;
 extern crate serde;
 #[macro_use]
 extern crate serde_json;
-#[macro_use]
-extern crate serde_derive;
 extern crate serde_xml_rs;
 #[macro_use]
 extern crate log;
@@ -16,6 +14,7 @@ mod osgb;
 mod shape;
 
 use chrono::prelude::*;
+use serde::{Serialize, Deserialize};
 use clap::{App, Arg};
 use log::{Level, LevelFilter};
 use std::io::Write;
